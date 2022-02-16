@@ -1,7 +1,7 @@
+import { useState } from 'react'
 import "./styles.css"
 
 function App() {
-  return (
 
   const [calc, setCalc] = useState("")
   const [result, setResult] = useState("")
@@ -22,6 +22,24 @@ function App() {
     }
   }
 
+  const calculate = () => {
+    setCalc(eval(calc))
+    setResult('0')
+  }
+
+  const deleteKey = () => {
+    if(calc === '') {
+      return
+    }
+    const value = calc.slice(0, -1)
+    setCalc(value)
+  }
+
+  const clear = () => {
+    setCalc('')
+    setResult('')
+  }
+
   return (
     <div className="calculator-grid">
       <div className="output">
@@ -29,24 +47,24 @@ function App() {
         <div className="current-operand" id="display">{ calc || "0" }</div>
       </div>
 
-      <button className="span-two">AC</button>
-      <button>DEL</button>
-      <button>&divide;</button>
-      <button>1</button>
-      <button>2</button>
-      <button>3</button>
-      <button>&times;</button>
-      <button>4</button>
-      <button>5</button>
-      <button>6</button>
-      <button>+</button>
-      <button>7</button>
-      <button>8</button>
-      <button>9</button>
-      <button>&minus;</button>
-      <button>.</button>
-      <button>0</button>
-      <button className="span-two">=</button>
+      <button className="span-two" id="clear" onClick={clear}>AC</button>
+      <button onClick={deleteKey}>DEL</button>
+      <button id="divide" onClick={() => updateCalc('/')}>&divide;</button>
+      <button id="one" onClick={() => updateCalc('1')}>1</button>
+      <button id="two" onClick={() => updateCalc('2')}>2</button>
+      <button id="three"onClick={() => updateCalc('3')}>3</button>
+      <button id="multiply" onClick={() => updateCalc('*')}>&times;</button>
+      <button id="four" onClick={() => updateCalc('4')}>4</button>
+      <button id="five" onClick={() => updateCalc('5')}>5</button>
+      <button id="six" onClick={() => updateCalc('6')}>6</button>
+      <button id="add" onClick={() => updateCalc('+')}>+</button>
+      <button id="seven" onClick={() => updateCalc('7')}>7</button>
+      <button id="eight" onClick={() => updateCalc('8')}>8</button>
+      <button id="nine" onClick={() => updateCalc('9')}>9</button>
+      <button id="subtract"  onClick={() => updateCalc('-')}>&minus;</button>
+      <button id="decimal" onClick={() => updateCalc('.')}>.</button>
+      <button id="zero" onClick={() => updateCalc('0')}>0</button>
+      <button className="span-two" id="equals" onClick={calculate}>=</button>
 
     </div>
   )
