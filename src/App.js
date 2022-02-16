@@ -25,8 +25,8 @@ function App() {
   return (
     <div className="calculator-grid">
       <div className="output">
-        <div className="previous-operand"></div>
-        <div className="current-operand"></div>
+        <div className="previous-operand">{result ? result : '0'}</div>
+        <div className="current-operand" id="display">{ calc || "0" }</div>
       </div>
 
       <button className="span-two">AC</button>
