@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/87664239/154229000-7eceaaf2-31e1-46bf-bc18-1bfa209a046f.png)
 
-**Objective**: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/wgGVVX.
+**Objective**: Build a CodePen.io app that is functionally similar to this: <https://codepen.io/freeCodeCamp/full/wgGVVX>.
 
 Fulfill the below user stories and get all of the tests to pass. Give it your own personal style.
 
@@ -40,7 +40,7 @@ You can use any mix of HTML, JavaScript, CSS, Bootstrap, SASS, React, Redux, and
 
 **User Story #15**: My calculator should have several decimal places of precision when it comes to rounding (note that there is no exact standard, but you should be able to handle calculations like `2 / 7` with reasonable precision to at least 4 decimal places).
 
-**Note On Calculator Logic**: It should be noted that there are two main schools of thought on calculator input logic: __immediate execution logic and formula logic__. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.
+**Note On Calculator Logic**: It should be noted that there are two main schools of thought on calculator input logic: _immediate execution logic and formula logic_. Our example utilizes formula logic and observes order of operation precedence, immediate execution does not. Either is acceptable, but please note that depending on which you choose, your calculator may yield different results than ours for certain equations (see below example). As long as your math can be verified by another production calculator, please do not consider this a bug.
 
 **EXAMPLE**: `3 + 5 x 6 - 2 / 4 =`
 
