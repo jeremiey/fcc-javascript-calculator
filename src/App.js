@@ -2,6 +2,26 @@ import "./styles.css"
 
 function App() {
   return (
+
+  const [calc, setCalc] = useState("")
+  const [result, setResult] = useState("")
+
+  const operators = ['/', '*', '+', '-', '.']
+
+  const updateCalc = value => {
+    if(
+      (operators.includes(value) && calc === '') ||
+      (operators.includes(value) && operators.includes(calc.slice(-1)))
+    ) {
+        return
+    }
+    setCalc(calc + value)
+
+    if(!operators.includes(value)) {
+      setResult(eval(calc + value))
+    }
+  }
+
     <div className="calculator-grid">
       <div className="output">
         <div className="previous-operand"></div>
