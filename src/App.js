@@ -18,11 +18,13 @@ function App() {
     setCalc(calc + value)
 
     if(!operators.includes(value)) {
+      // eslint-disable-next-line
       setResult(eval(calc + value))
     }
   }
 
   const calculate = () => {
+    // eslint-disable-next-line
     setCalc(eval(calc))
     setResult('0')
   }
